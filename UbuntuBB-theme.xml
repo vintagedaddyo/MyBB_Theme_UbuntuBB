@@ -1,0 +1,3104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme name="UbuntuBB" version="1820">
+	<properties>
+		<templateset><![CDATA[17]]></templateset>
+		<editortheme><![CDATA[mybb.css]]></editortheme>
+		<imgdir><![CDATA[themes/ubuntubb]]></imgdir>
+		<logo><![CDATA[themes/ubuntubb/headerlogo.png]]></logo>
+		<tablespace><![CDATA[4]]></tablespace>
+		<borderwidth><![CDATA[1]]></borderwidth>
+		<color><![CDATA[]]></color>
+		<disporder><![CDATA[a:7:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:10:"usercp.css";i:3;s:17:"thread_status.css";i:4;s:16:"star_ratings.css";i:5;s:14:"showthread.css";i:6;s:9:"modcp.css";i:7;}]]></disporder>
+	</properties>
+	<stylesheets>
+		<stylesheet name="global.css" version="1820"><![CDATA[/*
+ * MyBB: UbuntuBB Frontend Theme 
+ *
+ * File: global.css File
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.1
+ * 
+ */
+
+#scroll_up, #scroll_dn {
+  position: fixed;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  background: #D99753 url('themes/ubuntubb/sc_arrow.png') center no-repeat;
+}
+
+#scroll_up {
+    bottom: 50px;
+}
+
+#scroll_dn {
+    bottom: 10px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.progress_bar {
+    border: 1px solid #6d4c07;
+    padding: 1px;
+}
+
+.progress {
+    padding: 5px 0;
+    box-sizing: border-box;
+    background: #6d4c07 url('themes/ubuntubb/thead_bg.png') center repeat-x;
+}
+
+body {
+	background: #fff;
+	color: #000;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+	text-align: center; /* IE 5 fix */
+	line-height: 1.4;
+	overflow-y: scroll;
+	margin-left: 5em;
+	margin-right: 5em;
+	margin-top: 0;
+	padding: 0;
+}
+
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #6d4c07 ;
+	text-decoration: underline;
+}
+
+#header {
+    margin: 0;
+    padding: 0;
+}
+
+#ubuntubbmastwrap {
+	margin-left: -5em;
+	margin-right: -5em;
+	background: url('themes/ubuntubb/u-header.png') bottom left repeat-x #6d4c07;
+}
+
+#ubuntubbmasthead a {
+	display:block;
+}
+
+#ubuntubbmasthead {
+	position:relative;
+/* background: url('themes/ubuntubb/headerlogo.png') bottom left no-repeat transparent; */
+	background: url('themes/ubuntubb/u-header.png') bottom left no-repeat transparent;
+	border-style: solid;
+	border-width: 0;
+	color: #000;
+     height: 90px;
+	display: block;
+}
+
+ul {
+	margin-left: 5px;
+}
+
+#ubuntubbnav {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+}
+
+#ubuntubbnav ul {
+	display:inline;
+	margin:0;
+	padding:10px 10px 0 1px;
+	list-style:none;
+}
+                  
+#ubuntubbnav li {
+	display:inline;
+	float: right;
+	background:url('themes/ubuntubb/tab_off_ns1.png') no-repeat left top;
+	margin:0;
+	padding: 0 0 0 5px;
+}
+
+#ubuntubbnav a {
+	float: right;
+	font-size: 13px;
+	display:block;
+	background:url('themes/ubuntubb/tab_off_ns2.png') no-repeat right top;
+     padding:8px 15px 3px 8px; 
+	text-decoration:none;
+	font-weight: bold;
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#ubuntubbnav a {
+	float:none;
+}
+/* End IE5-Mac hack */
+
+#ubuntubbnav li:hover, #sisternav li:hover a {
+	background-position:0% -163px;
+float: right;
+}
+
+#ubuntubbnav li:hover a {
+	background-position:100% -163px;
+}
+
+#ubuntubbnav #current {
+	background:url('themes/ubuntubb/tab_on_ns1.png') no-repeat left top;                
+}
+
+#ubuntubbnav #current a {
+	background:url('themes/ubuntubb/tab_on_ns2.png') no-repeat right top;
+	padding-bottom:4px;
+}
+
+#ubuntubbnav a , #ubuntubbnav #current a { 
+	color: #444; 
+}
+
+#ubuntubbnav #current a:hover, #ubuntubbnav li a:hover { 
+	color: #000;
+}
+
+#container {
+	width: 95%;
+	background: #fff;
+	border: 1px solid #fff;
+	color: #000000;
+	margin: auto auto;
+	padding: 20px;
+	text-align: left; /* IE 5 fix */
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+}
+
+
+#logo {
+	background: #fff;
+	padding: 10px 0;
+
+}
+
+#content {
+	width: auto !important;
+}
+
+#header ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header ul.menu li {
+	margin: 0 7px;
+	display: inline;
+}
+
+#header ul.menu li a {
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+#logo ul.top_links {
+	font-weight: bold;
+	text-align: right;
+	margin: -10px 5px 0 0;
+}
+
+#logo ul.top_links a.search {
+	background: url('themes/ubuntubb/toplinks/search.png') left no-repeat; 
+}
+
+#logo ul.top_links a.memberlist {
+	background: url('themes/ubuntubb/toplinks/memberlist.png') left no-repeat;  
+}
+
+#logo ul.top_links a.calendar {
+	background: url('themes/ubuntubb/toplinks/calendar.png') left no-repeat;  
+}
+
+#logo ul.top_links a.help {
+	background: url('themes/ubuntubb/toplinks/help.png') left no-repeat;  
+}
+
+#logo ul.top_links a.portal {
+	background: url('themes/ubuntubb/toplinks/portal.png') top left no-repeat; 
+}
+
+#panel .upper a.logout {
+	font-weight: bold;
+	padding-right: 20px;
+	margin-left: 10px;
+	background: url('themes/ubuntubb/welcomeblock/logout.png') top right no-repeat; 
+}
+
+#panel .upper a.login,
+#panel .upper a.lost_password {
+	padding-left: 20px;
+	margin-left: 10px;
+	font-weight: bold;
+	background: url('themes/ubuntubb/welcomeblock/login.png') top left no-repeat;
+}
+
+#panel .upper a.register {
+	padding-right: 20px;
+	margin-left: 10px;
+	font-weight: bold;
+	background: url('themes/ubuntubb/welcomeblock/register.png') top right no-repeat; 
+}
+
+#panel .lower ul.panel_links {
+	float: left;
+}
+
+#panel .lower ul.panel_links a.usercp {
+	background: url('themes/ubuntubb/welcomeblock/usercp.png') top left no-repeat;  
+}
+
+#panel .lower ul.panel_links a.modcp {
+	 background: url('themes/ubuntubb/welcomeblock/modcp.png') top left no-repeat; 
+}	
+
+#panel .lower ul.panel_links a.admincp {
+	 background: url('themes/ubuntubb/welcomeblock/admincp.png') top left no-repeat;  
+}
+
+#panel .lower ul.user_links {
+	float: right;
+}
+
+#panel .lower ul.user_links li a {
+	padding: 0;
+	background-image: none;
+}
+
+#panel .upper {
+	color: #000;
+	padding: 7px;
+	clear: both;
+}
+
+#panel .upper a:link,
+#panel .upper a:visited,
+#panel .upper a:hover,
+#panel .upper a:active {
+	color: #000;
+}
+
+#panel {
+		background: #efefef;
+	color: #000;
+	border: 1px solid #D4D4D4;
+}
+
+#panel .lower {
+	color: #000;
+	padding: 5px;
+}
+
+#panel .lower a:link,
+#panel .lower a:visited,
+#panel .lower a:hover,
+#panel .lower a:active {
+	color: #000;
+}
+
+#search {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	float: left;
+	vertical-align: middle; 
+}
+
+#search input.button {
+	border-color: #000;
+}
+
+#search input.textbox {
+	border-color: #D4D4D4;
+	background: #F5F5F5;
+}
+
+#search input.button {
+	background: #6d4c07 url('themes/ubuntubb/thead_bg.png') top left repeat-x;
+	color: #fff;
+}
+
+#search input {
+	margin: -3px 0;
+}
+
+#quick_login .remember_me input {
+	vertical-align: middle;
+	margin: -3px 0 0 5px;
+}
+
+#footer {
+	padding-top: 15px;
+	clear: both;
+}
+
+#footer ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#footer ul.menu li {
+	margin: 0 5px;
+	display: inline;
+}
+
+#footer .upper {
+	font-size: 12px;
+	overflow: hidden;
+	background: #EFEFEF;
+	border: 1px solid #D4D4D4;
+	color: #000000;
+	padding: 10px;
+
+}
+
+#footer a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+#footer a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+#footer a:hover, a:active {
+	color: #000;
+	text-decoration: underline;
+}
+
+#footer .upper .language {
+	float: right;
+	margin: -1px;
+	margin-left: 15px;
+}
+
+#footer .upper .language select {
+	border-color: #ccc;
+}
+
+#footer .upper .theme {
+	float: right;
+	margin: -1px;
+	margin-left: 15px;
+}
+
+#footer .upper .theme select {
+	border-color: #ccc;
+}
+
+#footer .upper ul.bottom_links {
+	float: left;
+	margin: 4px 0 0 0;
+}
+
+#footer .lower {
+	color: #666;
+	padding: 6px 6px 12px 6px;
+	overflow: hidden;
+	font-size: 11px;
+}
+
+#footer .lower a:link,
+#footer .lower a:visited {
+	color:  #000;
+}
+
+#footer .lower a:hover {
+	color: #000;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+
+#footer .lower a:active {
+	color: #000;
+	text-decoration: underline;
+}
+
+#footer .lower #current_time {
+	float: right;
+	color: #888;
+}
+
+#debug {
+	float: right;
+	text-align: right;
+	margin-top: 20px;
+	font-size: 11px;
+}
+
+.scaleimages img {
+	max-width: 100%;
+}
+
+.forum_status {
+	height: 32px;
+	width: 32px; 	
+	display: inline-block;
+}
+
+.forum_on {
+	background-image: url('themes/ubuntubb/on.png'); 
+}
+
+.forum_off {
+	background-image: url('themes/ubuntubb/off.png');  
+}
+
+.forum_offclose {
+	background-image: url('themes/ubuntubb/offlock.png'); 
+}
+
+.forum_offlock {
+	background-image: url('themes/ubuntubb/offlock.png'); 
+}
+
+.forum_offlink {
+	background-image: url('themes/ubuntubb/offlink.png');  
+}
+
+.subforumicon {
+	height: 16px; 
+	width: 16px; 
+	display: inline-block;  
+	vertical-align: middle; 
+}
+
+.subforum_minion {
+    background-image: url('themes/ubuntubb/minion.png'); 
+}
+
+.subforum_minioff {
+	background-image: url('themes/ubuntubb/minioff.png');  
+}
+
+.subforum_minioffclose {
+	background-image: url('themes/ubuntubb/miniofflock.png'); 
+}
+
+.subforum_miniofflock {
+	background-image: url('themes/ubuntubb/miniofflock.png'); 
+}
+
+.subforum_miniofflink {
+	background-image: url('themes/ubuntubb/miniofflink.png'); 
+}
+
+table {
+	color: #333;
+	font-size: 13px;
+}
+
+.tborder {
+    background: #6d4c07;
+	width: 100%;
+	margin: auto auto;
+/*	padding: 1px; */
+}
+
+.tfixed {
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+.thead {
+	background: #6d4c07 url('themes/ubuntubb/thead_bg.png') top left repeat-x;
+	color: #ffffff;
+	padding: 4px; 
+}
+
+.thead a:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.thead a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.thead a:hover,
+.thead a:active {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.tcat {
+	background: #FEFDFD url('themes/ubuntubb/tcat_bg.png') top left repeat-x;
+	color: #000;
+	padding: 6px;
+	font-size: 12px;
+}
+
+.tcat a:link {
+	color: #000;
+}
+
+.tcat a:visited {
+	color: #000;
+}
+
+.tcat a:hover,
+.tcat a:active {
+	color: #000000;
+}
+
+.trow1 {
+	background: #f5f5f5;
+}
+
+.trow2 {
+	background: #EFEFEF;
+}
+
+.trow_shaded {
+	background: #ffdde0;
+}
+
+.no_bottom_border {
+	border-bottom: 0;
+}
+
+.post.unapproved_post {
+	background: #ffdde0;
+}
+
+.post.unapproved_post .post_author {
+	border-bottom-color: #ffb8be;
+}
+
+.post.classic.unapproved_post .post_author {
+	border-color: #ffb8be;
+}
+
+.post.unapproved_post .post_controls {
+	border-top-color: #ffb8be;
+}
+
+.trow_deleted,
+.post.deleted_post {
+	background: #E8DEFF;
+}
+
+.trow_selected,
+tr.trow_selected td {
+	background: #FFFBD9;
+}
+
+.trow_selected a:link,
+.trow_selected a:visited,
+.trow_selected a:hover,
+.trow_selected a:active {
+	color: #333;
+}
+
+.trow_sep {
+	background: #FEFDFD url('themes/ubuntubb/tcat_bg.png') top left repeat-x;
+	color: #000;
+	padding: 6px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.tfoot {
+	background: #6d4c07 url('themes/ubuntubb/thead_bg.png') top left repeat-x;
+	color: #000;
+	padding: 4px;
+}
+
+.tfoot a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+.tfoot a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+.tfoot a:hover,
+.tfoot a:active {
+	color: #FAF6ED;
+	text-decoration: underline;
+}
+
+.thead input.textbox,
+.thead select {
+	border: 1px solid #6D4C07;
+}
+
+.bottommenu {
+	background: #efefef;
+	color: #000;
+    border: 1px solid #4874a3;
+	padding: 10px;
+}
+
+.navigation {
+	color: #000;
+	font-size: 12px;
+}
+
+.navigation a:link {
+	text-decoration: none;
+}
+
+.navigation a:visited {
+	text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a:active {
+	text-decoration: underline;
+}
+
+.navigation .active {
+	color: #000;
+	font-size: small;
+	font-weight: bold;
+}
+
+.smalltext {
+	font-size: 11px;
+}
+
+.largetext {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+fieldset {
+	padding: 12px;
+	border: 1px solid #ccc;
+	margin: 0;
+}
+
+fieldset.trow1,
+fieldset.trow2 {
+	border-color: #bbb;
+}
+
+fieldset.align_right {
+	text-align: right;
+}
+
+input.textbox {
+	background: #ffffff;
+	color: #000;
+	border: 1px solid #6D4C07;
+	padding: 3px;
+	outline: 0;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+}
+
+textarea {
+	background: #ffffff;
+	color: #000;
+	border: 1px solid #8C6237;
+	padding: 2px;
+	line-height: 1.4;
+	outline: 0;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+}
+
+select {
+	background: #ffffff;
+	padding: 3px;
+	border: 1px solid #6D4C07;
+	outline: 0;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+}
+
+button,
+input.button {
+	display: inline-block;
+	padding: 2px 5px;
+	margin: 2px;
+	font-size: 12px;
+	background: #8C6237 url('themes/ubuntubb/thead_bg.png');
+	color: #FFFFFF;
+	border:1px solid #8C6237;
+	border-top-right-radius:0px;
+    border-top-left-radius:0px;
+    border-bottom-right-radius:0px;
+    border-bottom-left-radius:0px;
+	-webkit-box-shadow:inset 0px 0px 0px 1px #8C6237;
+	-moz-box-shadow:inset 0px 0px 0px 1px #8C6237;
+	box-shadow:inset 0px 0px 0px 1px #8C6237;
+  transition:background 0.4s,border-color 0.7s,box-shadow 0.4s;-webkit-transition:background 0.4s,border-color 0.4s,box-shadow 0.4s;-moz-transition:background 0.4s,border-color 0.4s,box-shadow 0.4s;
+}
+
+button:hover,
+input.button:hover {
+	background: #bacde6 url('themes/ubuntubb/tcat_bg.png');
+	color: #000000;
+	border-color: #ccc;
+  -webkit-box-shadow:inset 0px 0px 0px 1px #ccc;
+	-moz-box-shadow:inset 0px 0px 0px 1px #ccc;
+	box-shadow:inset 0px 0px 0px 1px #ccc;
+  transition:background 0.4s,border-color 0.7s,box-shadow 0.4s;-webkit-transition:background 0.4s,border-color 0.4s,box-shadow 0.4s;-moz-transition:background 0.4s,border-color 0.4s,box-shadow 0.4s;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+form input.error {
+	border: 1px solid #f30;
+	color: #f30;
+	background: #ffffff;
+	padding: 3px;
+	outline: 0;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+}
+
+form input.valid {
+	border: 1px solid #0c0;
+	background: #ffffff;
+	padding: 3px;
+	outline: 0;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+}
+
+form label.error {
+	color: #f30;
+	margin: 5px;
+	padding: 0px;
+	display: block;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+form #message {
+    width: 500px;
+}
+
+.editor {
+	background: #f1f1f1;
+	border: 1px solid #ccc;
+}
+
+.editor_control_bar {
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+.post .editor_control_bar {
+	background: #f5f5f5;
+}
+
+.popup_menu {
+	background: #ccc;
+	border: 1px solid #000;
+}
+
+.popup_menu .popup_item {
+	background: #fff;
+	color: #000;
+}
+
+.popup_menu .popup_item:hover {
+	background: #eee;
+	color: #000;
+}
+
+.trow_reputation_positive {
+	background: #ccffcc;
+}
+
+.trow_reputation_negative {
+	background: #ffcccc;
+}
+
+.reputation_positive {
+	color: green;
+}
+
+.reputation_neutral {
+	color: #444;
+}
+
+.reputation_negative {
+	color: red;
+}
+
+.repbox {
+	font-size:16px;
+	font-weight: bold;
+	padding:5px 7px 5px 7px;
+}
+
+._neutral {
+	background-color:#FAFAFA;
+	color: #999999;
+	border:1px solid #CCCCCC;
+}
+
+._minus {
+	background-color: #FDD2D1;
+	color: #CB0200;
+	border:1px solid #980201;
+}
+
+._plus {
+	background-color:#E8FCDC;
+	color: #008800;
+	border:1px solid #008800;
+}
+
+img {
+	border: none;
+}
+
+img.attachment {
+	border: 1px solid #E9E5D7;
+	padding: 2px;
+}
+
+hr {
+	background-color: #000000;
+	color: #000000;
+	height: 1px;
+	border: 0px;
+}
+
+.clear {
+	clear: both;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+.hidden {
+	display: none;
+	float: none;
+	width: 1%;
+}
+
+.hiddenrow {
+	display: none;
+}
+
+.selectall {
+	background: #FFFBD9;
+	color: #333;
+	text-align: center;
+}
+
+.expcolimage {
+	float: right;
+	width: auto;
+	vertical-align: middle;
+	margin-top: 3px;
+}
+
+.tcat_menu > .expcolimage {
+	margin-top: 0;
+}
+
+blockquote {
+	border: 1px solid #ccc;
+	margin: 0;
+	background: #fff;
+	padding: 10px;
+}
+
+blockquote cite {
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+	font-style: normal;
+	display: block;
+	padding-bottom: 3px;
+	margin: 0 0 10px 0;
+}
+
+blockquote cite span {
+	float: right;
+	font-weight: normal;
+	font-size: 12px;
+	color: #666;
+}
+
+blockquote cite span.highlight {
+	float: none;
+	font-weight: bold;
+	padding-bottom: 0;
+}
+
+.codeblock {
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+.codeblock .title {
+	background: #FEFDFD url('themes/ubuntubb/tcat_bg.png') top left repeat-x;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	padding-bottom: 3px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+}
+
+.codeblock code {
+	overflow: auto;
+	height: auto;
+	max-height: 200px;
+	display: block;
+	font-family: Monaco, Consolas, Courier, monospace;
+	font-size: 13px;
+	padding: 10px;
+}
+
+.smilie {
+	vertical-align: middle;
+}
+
+.smilie_pointer {
+	cursor: pointer;
+}
+
+.separator {
+	margin: 5px;
+	padding: 0;
+	height: 0px;
+	font-size: 1px;
+	list-style-type: none;
+}
+
+.popup_menu .popup_item_container {
+	margin: 1px;
+	text-align: left;
+}
+
+.popup_menu .popup_item {
+	display: block;
+	padding: 4px;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+.popup_menu a.popup_item:hover {
+	text-decoration: none;
+}
+
+.subject_new {
+	font-weight: bold;
+}
+
+.highlight {
+	background: #FFFFCC;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.pm_alert {
+	background: #FFF6BF;
+	border-top: 1px solid #FFD324;
+	border-left: 0px solid #FFD324;
+	border-right: 0px solid #FFD324;
+	border-bottom: 1px solid #FFD324;
+	text-align: center;
+	padding: 5px 20px;
+	margin-bottom: 15px;
+	font-size: 11px;
+}
+
+.red_alert {
+	background: #FBE3E4;
+	border-top: 1px solid #A5161A;
+	border-left: 0px solid #A5161A;
+	border-right: 0px solid #A5161A;
+	border-bottom: 1px solid #A5161A;
+	color: #A5161A;
+	text-align: center;
+	padding: 5px 20px;
+	margin-bottom: 15px;
+	font-size: 11px;
+	word-wrap: break-word;
+}
+
+.red_alert a:link,
+.red_alert a:visited,
+.red_alert a:hover,
+.red_alert  a:active  {
+	color: #A5161A;
+}
+
+.high_warning {
+	color: #CC0000;
+}
+
+.moderate_warning {
+	color: #F3611B;
+}
+
+.low_warning {
+	color: #AE5700;
+}
+
+.online {
+	color: #15A018;
+}
+
+.offline {
+	color: #C7C7C7;
+}
+
+div.error {
+	padding: 5px 10px;
+	border-top: 2px solid #FFD324;
+	border-bottom: 2px solid #FFD324;
+	background: #FFF6BF;
+	font-size: 12px;
+}
+
+div.error p {
+	margin: 0;
+	color: #000;
+	font-weight: normal;
+}
+
+div.error p em {
+	font-style: normal;
+	font-weight: bold;
+	padding-left: 24px;
+	display: block;
+	color: #C00;
+	background: url('themes/ubuntubb/error.png') no-repeat 0;
+}
+
+div.error ul {
+	margin-left: 24px;
+}
+
+.pagination {
+	font-size: 11px;
+	padding-top: 10px;
+	margin-bottom: 5px;
+}
+
+.tfoot .pagination,
+.tcat .pagination {
+	padding-top: 0;
+}
+
+.pagination .pages {
+	font-weight: bold;
+}
+
+.pagination .pagination_current,
+.pagination a {
+	padding: 3px 6px;
+	margin-bottom: 3px;
+}
+
+.pagination a {
+	background: #f5f5f5;
+	border: 1px solid #ccc;
+}
+
+.pagination .pagination_current {
+	background: none;
+	color: #333;
+	border: none;
+	font-weight: bold;
+}
+
+.pagination a:hover {
+	background: #6d4c07;
+	color: #fff;
+	border-color: #263c30;
+	text-decoration: none;
+}
+
+.pagination .go_page img {
+	margin-bottom: -4px;
+}
+
+.drop_go_page {
+	background: #f5f5f5;
+	padding: 4px;
+}
+
+.pagination_breadcrumb {
+	background-color: #efefef;
+	border: 1px solid #fff;
+	outline: 1px solid #ccc;
+	padding: 5px;
+	margin-top: 5px;
+	font-weight: normal;
+}
+
+.pagination_breadcrumb_link {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.thread_legend,
+.thread_legend dd {
+	margin: 0;
+	padding: 0;
+}
+
+.thread_legend dd {
+	padding-bottom: 4px;
+	margin-right: 15px;
+}
+
+.thread_legend img {
+	margin-right: 4px;
+	vertical-align: bottom;
+}
+
+.forum_legend,
+.forum_legend dt,
+.forum_legend dd {
+	margin: 0;
+	padding: 0;
+		padding-bottom: 10px;
+}
+
+.forum_legend dd {
+	float: left;
+	margin-right: 10px;
+	margin-top: 7px;
+}
+
+.forum_legend dt {
+	margin-right: 10px;
+	float: left;
+}
+
+.success_message {
+	color: #00b200;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+.error_message {
+	color: #C00;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+#posts_container {
+	padding: 0;
+}
+
+.ignored_post {
+	border-top: 3px solid #333;
+	padding: 15px;
+}
+
+.ignored_post .show_ignored_post {
+	margin-top: -15px;
+}
+
+.ignored_post .show_ignored_post a.button span {
+	background-position: 0 -400px;
+}
+
+.post {
+	overflow: hidden;
+}
+
+.post.classic {
+	padding-top: 15px;
+    background: #f5f5f5;
+}
+
+.post .post_author {
+	border-bottom: 1px solid #ccc;
+	border-top: 2px solid #ccc;
+	background: #f5f5f5;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.post.classic .post_author {
+	border: 1px solid #ddd;
+	float: left;
+	width: 15%;
+	margin: 0 1% 15px 0;
+	border-left: 0;
+	padding: 5px 1%;
+	background: #FFFFFF;
+}
+
+.post .post_author .buddy_status {
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+.post .post_author div.author_avatar {
+	float: left;
+	margin-right: 3px;
+}
+
+.post.classic .post_author div.author_avatar {
+	float: none;
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.post .post_author div.author_avatar img {
+	padding: 5px;
+	/* border: 1px solid #ddd;
+	background: #fff; */
+}
+
+.post .post_author div.author_information {
+	float: left;
+	padding: 6px 8px;
+}
+
+.post.classic .post_author div.author_information {
+	float: none;
+	padding: 0;
+	text-align: center;
+}
+
+.post .post_author div.author_statistics {
+	float: right;
+	font-size: 11px;
+	padding: 3px 10px 3px 5px;
+	color: #666;
+	line-height: 1.3;
+}
+
+.post.classic .post_author div.author_statistics {
+	border-top: 1px dotted #ccc;
+	margin: 6px 0 0 0;
+	padding: 6px 6px 3px 6px;
+	float: none;
+}
+
+.post .post_head {
+	font-size: 11px;
+	padding-bottom: 4px;
+	border-bottom: 1px dotted #ddd;
+	margin-bottom: 4px;
+}
+
+.post .post_head span.post_date {
+	color: #666;
+}
+
+.post .post_head span.edited_post {
+	font-size: 10px;
+	color: #999;
+}
+
+.post .post_head span.edited_post a {
+	color: #666;
+}
+
+.post_body {
+	font-size: 14px;
+	padding: 12px 0;
+}
+
+.post.classic .post_content {
+	float: left;
+	width: 79%;
+	padding: 0 1% 5px 1%;
+}
+
+.post_content {
+	padding: 9px 10px 5px 10px;
+    background: #f5f5f5;
+}
+
+.post_content .signature {
+	margin-top: 5px;
+	border-top: 1px dotted #ddd;
+	padding: 10px 0 4px 0;
+}
+
+.post .post_meta {
+	margin: 4px 0;
+	font-size: 11px;
+	color: #999;
+}
+
+.post .post_meta a:link,
+.post .post_meta a:visited {
+	color: #777;
+}
+
+.post .post_meta a:hover,
+.post .post_meta a:active {
+	color: #777;
+}
+
+.post_controls {
+	clear: both;
+	background: #f5f5f5;
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.postbit_buttons > a:link,
+.postbit_buttons > a:hover,
+.postbit_buttons > a:visited,
+.postbit_buttons > a:active {
+	display: inline-block;
+	padding: 2px 5px;
+	margin: 2px;
+	font-size: 11px;
+	background: #6d4c07 url('themes/ubuntubb/thead_bg.png') repeat-x;
+	border: 1px solid #6d4c07;
+	color: #fff;
+}
+
+.postbit_buttons > a:hover {
+	border-color: #850000;
+}
+
+.postbit_buttons a span {
+	padding-left: 20px;
+	display: inline-block;
+	height: 16px;
+	background-image: url('themes/ubuntubb/sprites/buttons_sprite.png');
+	background-repeat: no-repeat;
+}
+
+.postbit_buttons a.postbit_find span {
+	background-position: 0 0;
+}
+
+.postbit_buttons a.postbit_reputation_add span {
+	background-position: 0 -20px;
+}
+
+.postbit_buttons a.postbit_email span {
+	background-position: 0 -40px;
+}
+
+.postbit_buttons a.postbit_website span {
+	background-position: 0 -60px;
+}
+
+.postbit_buttons a.postbit_pm span {
+	background-position: 0 -80px;
+}
+
+.postbit_buttons a.postbit_quote span {
+	background-position: 0 -100px;
+}
+
+.postbit_buttons a.postbit_multiquote span {
+	background-position: 0 -120px;
+}
+
+.postbit_buttons a.postbit_multiquote_on span {
+	background-position: 0 -140px;
+}
+
+.postbit_buttons a.postbit_edit span {
+	background-position: 0 -160px;
+}
+
+.postbit_buttons a.postbit_qdelete span {
+	background-position: 0 -180px;
+}
+
+.postbit_buttons a.postbit_qrestore span {
+	background-position: 0 -200px;
+}
+
+.postbit_buttons a.postbit_report span {
+	background-position: 0 -220px;
+}
+
+.postbit_buttons a.postbit_warn span {
+	background-position: 0 -240px;
+}
+
+.postbit_buttons a.postbit_purgespammer span {
+	background-position: 0 -540px;
+}
+
+.postbit_buttons a.postbit_reply_pm span {
+	background-position: 0 -260px;
+}
+
+.postbit_buttons a.postbit_reply_all span {
+	background-position: 0 -280px;
+}
+
+.postbit_buttons a.postbit_forward_pm span {
+	background-position: 0 -300px;
+}
+
+.postbit_buttons a.postbit_delete_pm span {
+	background-position: 0 -320px;
+}
+
+.post:not(.deleted_post) .postbit_qrestore,
+.post:not(.deleted_post) .status_type,
+.post.deleted_post .postbit_mirage {
+    display: none;
+}
+
+a.button:link,
+a.button:hover,
+a.button:visited,
+a.button:active {
+	background: #6d4c07  url('themes/ubuntubb/thead_bg.png') repeat-x;
+	color: #fff;
+	display: inline-block;
+	padding: 4px;
+    margin: 2px 2px 6px 2px;
+	border: 1px solid #000;
+	font-size: 14px;
+}
+
+a.button.small_button {
+	font-size: 13px;
+	margin: 0;
+	padding: 3px 6px;
+}
+
+a.button span {
+	padding-left: 20px;
+	display: inline-block;
+	background-image: url('themes/ubuntubb/sprites/buttons_sprite.png');
+	background-repeat: no-repeat;
+}
+
+a.button.new_thread_button span {
+	background-position: 0 -340px;
+}
+
+a.button.new_reply_button span {
+	background-position: 0 -360px;
+}
+
+a.button.closed_button span {
+	background-position: 0 -380px;
+}
+
+a.button.rate_user_button span {
+	background-position: 0 -400px;
+}
+
+a.button.add_buddy_button span {
+	background-position: 0 -440px;
+}
+
+a.button.remove_buddy_button span {
+	background-position: 0 -480px;
+}
+
+a.button.add_ignore_button span {
+	background-position: 0 -460px;
+}
+
+a.button.remove_ignore_button span {
+	background-position: 0 -500px;
+}
+
+a.button.report_user_button span {
+	background-position: 0 -520px;
+}
+
+.quick_jump {
+	background: url('themes/ubuntubb/jump.png') no-repeat 0;
+	width: 13px;
+	height: 13px;
+	padding-left: 13px; /* amount of padding needed for image to fully show */
+	margin-top: -3px;
+	border: none;
+}
+
+.pollbar {
+	background: url('themes/ubuntubb/pollbar.png') top left repeat-x;
+	border: 1px solid #3f3f3f;
+	height: 10px;
+}
+
+.pollbar .percent {
+	display: none;
+}
+
+.posticons_label {
+	white-space: nowrap;
+}
+
+/** jGrowl Start **/
+
+/** Special IE6 Style Positioning **/
+.ie6 {
+	position: absolute;
+}
+
+.ie6.top-right {
+	right: auto;
+	bottom: auto;
+	left: expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.top-left {
+	left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.bottom-right {
+	left: expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.bottom-left {
+	left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.center {
+	left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+	width: 100%;
+}
+
+/** jGrowl Styling **/
+.jGrowl {
+	z-index: 9999;
+	color: #fff;
+	font-size: 12px;
+	position: fixed;
+}
+
+.jGrowl.top-left {
+	left: 0px;
+	top: 0px;
+}
+
+.jGrowl.top-right {
+	right: 0px;
+	top: 0px;
+}
+
+.jGrowl.bottom-left {
+	left: 0px;
+	bottom:	0px;
+}
+
+.jGrowl.bottom-right {
+	right: 0px;
+	bottom: 0px;
+}
+
+.jGrowl.center {
+	top: 0px;
+	width: 50%;
+	left: 25%;
+}
+
+/** Cross Browser Styling **/
+
+.center .jGrowl-notification,
+.center .jGrowl-closer {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.jGrowl .jGrowl-notification,
+.jGrowl .jGrowl-closer {
+	background-color: #000;
+	opacity: .85;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+	zoom: 1;
+	width: 235px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	text-align: left;
+	display: none;
+	border-radius: 5px;
+}
+
+.jGrowl .jGrowl-notification {
+	min-height: 40px;
+}
+
+.jGrowl .jGrowl-notification,
+.jGrowl .jGrowl-closer {
+	margin: 10px;
+}
+
+.jGrowl .jGrowl-notification .jGrowl-header {
+	font-weight: bold;
+	font-size: .85em;
+}
+
+.jGrowl .jGrowl-notification .jGrowl-close {
+	z-index: 99;
+	float: right;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.jGrowl .jGrowl-closer {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	cursor: pointer;
+	font-size: .9em;
+	font-weight: bold;
+	text-align: center;
+}
+
+/** Hide jGrowl when printing **/
+@media print {
+	.jGrowl {
+		display: none;
+	}
+}
+
+/** jGrowl End **/
+
+/** Modal Start **/
+
+.blocker {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	z-index: 9999;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.75);
+	text-align: center;
+}
+
+.blocker:before{
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.05em;
+}
+
+.blocker.behind {
+	background-color: transparent;
+}
+
+.modal {
+	width: 400px;
+	text-align: left;
+	background: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	z-index: 2;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 0 10px #000;
+	-moz-box-shadow: 0 0 10px #000;
+	-o-box-shadow: 0 0 10px #000;
+	-ms-box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
+}
+
+.modal a.close-modal {
+	position: absolute;
+	top: -12.5px;
+	right: -12.5px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	background: url('themes/ubuntubb/close.png') no-repeat 0 0;
+}
+
+.modal-spinner {
+	display: none;
+	width: 64px;
+	height: 64px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-right: -32px;
+	margin-top: -32px;
+	background: url('themes/ubuntubb/spinner_big.gif') no-repeat center center;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border-radius: 8px;
+}
+
+/** Modal End **/
+
+/** Impromptu Start **/
+
+/*! jQuery-Impromptu - v5.2.4 - 2014-05-26
+* http://trentrichardson.com/Impromptu
+* Copyright (c) 2014 Trent Richardson; Licensed MIT */
+
+.jqifade {
+	position: absolute;
+	background-color: #777777;
+}
+
+div.jqi {
+	width: 400px;
+	max-width:90%;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	position: absolute;
+	background-color: #ffffff;
+	font-size: 11px;
+	text-align: left;
+	border: solid 1px #eeeeee;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	padding: 7px;
+}
+
+div.jqi .jqiclose {
+	position: absolute;
+	top: 4px; right: -2px;
+	width: 18px;
+	cursor: default;
+	color: #bbbbbb;
+	font-weight: bold;
+}
+
+div.jqi .jqistate {
+	background-color: #fff;
+}
+
+div.jqi .jqititle {
+	padding: 5px 10px;
+	font-size: 16px;
+	line-height: 20px;
+	border-bottom: solid 1px #eeeeee;
+}
+
+div.jqi .jqimessage {
+	padding: 10px;
+	line-height: 20px;
+	color: #444444;
+}
+
+div.jqi .jqibuttons {
+	text-align: right;
+	margin: 0 -7px -7px -7px;
+	border-top: solid 1px #e4e4e4;
+	background-color: #f4f4f4;
+	border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+}
+
+div.jqi .jqibuttons button {
+	margin: 0;
+	padding: 15px 20px;
+	background-color: transparent;
+	font-weight: normal;
+	border: none;
+	border-left: solid 1px #e4e4e4;
+	color: #777;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+div.jqi .jqibuttons button.jqidefaultbutton {
+	color: #489afe;
+}
+
+div.jqi .jqibuttons button:hover,
+div.jqi .jqibuttons button:focus {
+	color: #287ade;
+	outline: none;
+}
+
+.jqiwarning .jqi .jqibuttons {
+	background-color: #b95656;
+}
+
+/* sub states */
+
+div.jqi .jqiparentstate::after {
+	background-color: #777;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+div.jqi .jqisubstate {
+	position: absolute;
+	top: 0;
+	left: 20%;
+	width: 60%;
+	padding: 7px;
+	border: solid 1px #eeeeee;
+	border-top: none;
+	border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+}
+
+div.jqi .jqisubstate .jqibuttons button {
+	padding: 10px 18px;
+}
+
+/* arrows for tooltips/tours */
+
+.jqi .jqiarrow {
+	position: absolute;
+	height: 0; width: 0;
+	line-height: 0;
+	font-size: 0;
+	border: solid 10px transparent;
+}
+
+.jqi .jqiarrowtl {
+	left: 10px;
+	top: -20px;
+	border-bottom-color: #ffffff;
+}
+
+.jqi .jqiarrowtc {
+	left: 50%;
+	top: -20px;
+	border-bottom-color: #ffffff;
+	margin-left: -10px;
+}
+
+.jqi .jqiarrowtr {
+	right: 10px;
+	top: -20px;
+	border-bottom-color: #ffffff;
+}
+
+.jqi .jqiarrowbl {
+	left: 10px;
+	bottom: -20px;
+	border-top-color: #ffffff;
+}
+
+.jqi .jqiarrowbc {
+	left: 50%;
+	bottom: -20px;
+	border-top-color: #ffffff;
+	margin-left: -10px;
+}
+
+.jqi .jqiarrowbr {
+	right: 10px;
+	bottom: -20px;
+	border-top-color: #ffffff;
+}
+
+.jqi .jqiarrowlt {
+	left: -20px;
+	top: 10px;
+	border-right-color: #ffffff;
+}
+
+.jqi .jqiarrowlm {
+	left: -20px;
+	top: 50%;
+	border-right-color: #ffffff;
+	margin-top: -10px;
+}
+
+.jqi .jqiarrowlb {
+	left: -20px;
+	bottom: 10px;
+	border-right-color: #ffffff;
+}
+
+.jqi .jqiarrowrt {
+	right: -20px;
+	top: 10px;
+	border-left-color: #ffffff;
+}
+
+.jqi .jqiarrowrm {
+	right: -20px;
+	top: 50%;
+	border-left-color: #ffffff;
+	margin-top: -10px;
+}
+
+.jqi .jqiarrowrb {
+	right: -20px;
+	bottom: 10px;
+	border-left-color: #ffffff;
+}
+
+/** Impromptu End */
+	]]>
+		</stylesheet>
+		<stylesheet name="css3.css" version="1820"><![CDATA[/*
+ * MyBB: UbuntuBB Frontend Theme 
+ *
+ * File: css3.css File
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.1
+ * 
+ */
+
+tr td.trow1:first-child,
+tr td.trow2:first-child,
+tr td.trow_shaded:first-child {
+	border-left: 0;
+}
+
+tr td.trow1:last-child,
+tr td.trow2:last-child,
+tr td.trow_shaded:last-child {
+	border-right: 0;
+}
+
+.tborder {
+	width: 100%;
+	margin: auto auto;
+}
+
+.tborder tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+.tborder tbody tr:last-child td:first-child {
+}
+
+.tborder tbody tr:last-child td:last-child {
+}
+
+.thead {
+}
+
+.thead_collapsed {
+}
+
+.thead_left {
+}
+
+.thead_right {
+}
+
+.tcat_menu {
+}
+
+.tborder tbody:nth-last-child(2) .tcat_collapse_collapsed {
+}
+
+
+input.textbox,
+input.invalid_field,
+input.valid_field,
+select,
+textarea {
+
+}
+
+button,
+input.button,
+.editor_control_bar,
+.postbit_buttons > a,
+a.button {
+    -moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+button,
+input.button,
+.editor_control_bar,
+.postbit_buttons > a,
+a.button
+.popup_menu,
+.postbit_buttons > a,
+a.button {
+    -moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.post.classic .post_author {
+}
+
+.popup_menu .popup_item_container:first-child .popup_item {
+}
+
+.popup_menu .popup_item_container:last-child .popup_item {
+}
+
+.pagination a {
+}
+
+.pollbar {
+}
+
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1820"><![CDATA[/*
+ * MyBB: UbuntuBB Frontend Theme 
+ *
+ * File: usercp.css File
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.1
+ * 
+ */
+
+.usercp_nav_item {
+	display: block;
+	padding: 1px 0 1px 23px;
+	background-repeat: no-repeat;
+}
+
+.usercp_nav_composepm {
+	background-image: url('themes/ubuntubb/usercp/composepm.png');
+}
+
+.usercp_nav_pmfolder {
+    background-image: url('themes/ubuntubb/usercp/pmfolder.png'); 
+}
+
+.usercp_nav_sub_pmfolder {
+	padding-left: 40px;
+	background-image: url('themes/ubuntubb/usercp/sub_pmfolder.png');  
+}
+
+.usercp_nav_trash_pmfolder {
+	padding-left: 40px;
+	background-image: url('themes/ubuntubb/usercp/trash_pmfolder.png');  
+}
+
+.usercp_nav_pmtracking {
+	background-image: url('themes/ubuntubb/usercp/pmtracking.png');  
+}
+
+.usercp_nav_pmfolders {
+    background-image: url('themes/ubuntubb/usercp/editfolders.png');  
+}
+
+.usercp_nav_profile {
+	background-image: url('themes/ubuntubb/usercp/profile.png');  
+}
+
+.usercp_nav_email {
+	padding-left: 40px;
+
+	background-image: url('themes/ubuntubb/usercp/email.png');  
+}
+
+.usercp_nav_password {
+	padding-left: 40px;
+	background-image: url('themes/ubuntubb/usercp/password.png');  
+}
+
+.usercp_nav_username {
+	padding-left: 40px;
+	background-image: url('themes/ubuntubb/usercp/username.png');  
+} 
+
+.usercp_nav_editsig {
+	padding-left: 40px;
+	background-image: url('themes/ubuntubb/usercp/editsig.png');  
+}
+
+.usercp_nav_avatar {
+	padding-left: 40px;
+	background-image: url('themes/ubuntubb/usercp/avatar.png');  
+}
+
+.usercp_nav_options {
+	background-image: url('themes/ubuntubb/usercp/options.png');  
+}
+
+.usercp_nav_usergroups {
+	background-image: url('themes/ubuntubb/usercp/usergroups.png');  
+}
+
+.usercp_nav_editlists {
+	background-image: url('themes/ubuntubb/usercp/editlists.png'); 
+}
+
+.usercp_nav_attachments {
+	background-image: url('themes/ubuntubb/usercp/attachments.png'); 
+}
+
+.usercp_nav_drafts {
+	background-image: url('themes/ubuntubb/usercp/drafts.png');  
+}
+
+.usercp_nav_subscriptions {
+	background-image: url('themes/ubuntubb/usercp/subscriptions.png');  
+}
+
+.usercp_nav_fsubscriptions {
+	background-image: url('themes/ubuntubb/usercp/fsubscriptions.png');  
+}
+
+.usercp_nav_viewprofile {
+	background-image: url('themes/ubuntubb/usercp/viewprofile.png'); 
+}
+
+.usercp_nav_home {
+	background-image: url('themes/ubuntubb/usercp/home.png');  
+}
+
+.usercp_notepad {
+	width: 99%;
+}
+
+.usercp_container {
+	margin: 5px;
+	padding: 8px;
+}
+
+.pmspace {
+	float: right;
+	margin: -3px 5px;
+}
+
+.pmspace_container {
+	background: #fff;
+	border: 1px solid #ccc;
+	width: 100px;
+	display: inline-block;
+}
+
+.pmspace_used {
+	display: inline-block;
+	color: #fff;
+	margin: -1px;
+}
+
+.pmspace_used.low {
+	border: 1px solid #0c5a01;
+	background: #167203;
+}
+
+.pmspace_used.medium {
+	background: #ff862b;
+	border: 1px solid #d7611e;
+}
+
+.pmspace_used.high {
+	background: #e73c3c;
+	border: 1px solid #c00;
+}
+
+.pmspace_unused {
+	display: inline-block;
+}
+
+.pmspace_text {
+	padding: 1px 5px;
+	display: inline-block;
+}
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1820"><![CDATA[/*
+ * MyBB: UbuntuBB Frontend Theme 
+ *
+ * File: thread_status.css File
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.1
+ * 
+ */
+
+.thread_status {
+	display: inline-block;
+	background-repeat: no-repeat;
+	height: 18px;
+	width: 18px;
+}
+
+.thread_status.dot_folder {
+  background-image: url('themes/ubuntubb/dot_folder.png');
+}
+
+.thread_status.dot_hotfolder {
+  background-image: url('themes/ubuntubb/dot_hotfolder.png');	
+}
+
+.thread_status.dot_hotclosefolder {
+  background-image: url('themes/ubuntubb/dot_hotlockfolder.png'); 
+}
+
+.thread_status.dot_closefolder {
+ background-image: url('themes/ubuntubb/dot_lockfolder.png');
+}
+
+.thread_status.dot_newfolder {
+ background-image: url('themes/ubuntubb/dot_newfolder.png');
+}
+
+.thread_status.dot_newhotfolder {
+ background-image: url('themes/ubuntubb/dot_newhotfolder.png'); 
+}
+
+.thread_status.dot_newhotclosefolder {
+ background-image: url('themes/ubuntubb/dot_newhotlockfolder.png');  
+}
+
+.thread_status.dot_newclosefolder {
+ background-image: url('themes/ubuntubb/dot_newlockfolder.png'); 
+}
+
+.thread_status.folder {
+ background-image: url('themes/ubuntubb/folder.png'); 
+}
+
+.thread_status.hotfolder {
+ background-image: url('themes/ubuntubb/hotfolder.png');  
+}
+
+.thread_status.hotclosefolder {
+   background-image: url('themes/ubuntubb/hotlockfolder.png'); 
+}
+
+.thread_status.closefolder {
+   background-image: url('themes/ubuntubb/lockfolder.png'); 
+}
+
+.thread_status.movefolder {
+    background-image: url('themes/ubuntubb/movefolder.png');
+}
+
+.thread_status.newfolder {
+    background-image: url('themes/ubuntubb/newfolder.png'); 
+}
+
+.thread_status.newhotfolder {
+ background-image: url('themes/ubuntubb/newhotfolder.png');
+}
+
+.thread_status.newhotclosefolder {
+    background-image: url('themes/ubuntubb/newhotlockfolder.png'); 
+}
+
+.thread_status.newclosefolder {
+    background-image: url('themes/ubuntubb/newlockfolder.png');  
+}
+	]]>
+		</stylesheet>
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1820"><![CDATA[/*
+ * MyBB: UbuntuBB Frontend Theme 
+ *
+ * File: star_rating.css File
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.1
+ * 
+ */
+
+.star_rating_container {
+   display:inline-block;
+   vertical-align:middle;
+   margin-right:6px;
+   float:right;
+   margin-top:6px;
+}
+
+.star_rating {
+     unicode-bidi: bidi-override;
+     direction: rtl;
+     list-style:none outside none;
+     margin:0;
+     padding:0;
+}
+
+.star_rating,
+.star_rating li a:hover,
+.star_rating .current_rating {
+  vertical-align: middle;      
+}
+
+td .star_rating {
+  margin-left: 0 auto;
+  width:120px;
+  position:relative;
+  left:-13px;
+}
+
+.star_rating li {
+  margin-left:5px;
+  float:right;
+  unicode-bidi: bidi-override;
+}
+
+.star_rating li a {
+  color:#b9b9b9;
+  text-decoration:none;
+}
+
+.star_rating li a {
+  font-size:0px;
+}
+
+.star_rating li a:before {
+  content: "\2605";
+  font-size:14px;
+}
+
+/*Firefox hack*/
+@-moz-document url-prefix() {
+.star_rating li a:before {
+  font-size:18px;
+  position:relative;
+  top:-5px;
+}
+}
+
+.star_rating_notrated li:hover a,
+.star_rating_notrated li:hover ~ li a {
+  color: #B77939 !important;
+  cursor:pointer;
+}
+
+
+li.current_rating[style*="20"] ~ li a.one_star,
+li.current_rating[style*="40"] ~ li:nth-child(n+5) a,
+li.current_rating[style*="60"] ~ li:nth-child(n+4) a,
+li.current_rating[style*="80"] ~ li:nth-child(n+3) a,
+li[style*="100"]~ li:nth-child(n+2) a  {
+  color:#eab71f;
+}
+
+.star_rating .current_rating {
+  unicode-bidi: bidi-override;
+  direction: ltr;
+  display:none;
+  float:left;
+  text-align:right;
+  position:relative;
+  top:1px;
+  right:3px;
+}
+
+
+.inline_rating {
+  float: left;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.star_rating_success, .success_message {
+  color: #00b200;
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+td[id*="rating_table"] {
+text-align:center;
+margin:0 auto;
+}
+		]]>
+		</stylesheet>
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1820"><![CDATA[/*
+ * MyBB: UbuntuBB Frontend Theme 
+ *
+ * File: showthread.css File
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.0
+ * 
+ */
+
+ul.thread_tools,
+ul.thread_tools li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.thread_tools li {
+	padding-left: 24px;
+	padding-bottom: 4px;
+	margin-bottom: 3px;
+	font-size: 11px;
+	background-repeat: no-repeat;
+}
+
+ul.thread_tools li.printable {
+    background-image: url('themes/ubuntubb/printable.png');
+}
+
+ul.thread_tools li.sendthread {
+    background-image: url('themes/ubuntubb/send.png');
+}
+
+ul.thread_tools li.subscription_add {
+    background-image: url('themes/ubuntubb/subscribe.png');
+}
+
+ul.thread_tools li.subscription_remove {
+    background-image: url('themes/ubuntubb/unsubscribe.png');
+}
+
+ul.thread_tools li.poll {
+    background-image: url('themes/ubuntubb/poll.png'); 
+}
+
+.showthread_spinner {
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	padding: 20px;
+	width: 100%;
+}
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1820"><![CDATA[/*
+ * MyBB: UbuntuBB Frontend Theme 
+ *
+ * File: modcp.css File
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.1
+ * 
+ */
+
+.modcp_nav_item {
+	display: block;
+	padding: 1px 0 1px 23px;
+	background-repeat: no-repeat;
+}
+
+.modcp_nav_home {
+	background-image: url('themes/ubuntubb/modcp/home.png');  
+} 
+
+.modcp_nav_announcements {
+	background-image: url('themes/ubuntubb/modcp/announcements.png'); 
+}
+
+.modcp_nav_reports {
+	background-image: url('themes/ubuntubb/modcp/reports.png'); 
+}
+
+.modcp_nav_modqueue {
+	background-image: url('themes/ubuntubb/modcp/modqueue.png'); 
+}
+
+.modcp_nav_modlogs {
+	background-image: url('themes/ubuntubb/modcp/modlogs.png'); 
+}
+
+.modcp_nav_editprofile {
+	background-image: url('themes/ubuntubb/modcp/editprofile.png'); 
+}
+
+.modcp_nav_banning {
+	background-image: url('themes/ubuntubb/modcp/banning.png');  
+}
+
+.modcp_nav_warninglogs {
+	background-image: url('themes/ubuntubb/modcp/warninglogs.png');  
+}
+
+.modcp_nav_ipsearch {
+	background-image: url('themes/ubuntubb/modcp/ipsearch.png');  
+}
+
+.modqueue_message {
+	overflow: auto;
+	max-height: 250px;
+}
+
+.modqueue_controls {
+	width: 270px;
+	float: right;
+	text-align: center;
+	border: 1px solid #ccc;
+	background: #fff;
+	padding: 6px;
+	font-weight: bold;
+}
+
+.modqueue_controls label {
+	margin-right: 8px;
+}
+
+.label_radio_ignore,
+.label_radio_delete,
+.label_radio_approve {
+	font-weight: bold;
+}
+
+.modqueue_meta {
+	color: #444;
+	font-size: 95%;
+	margin-bottom: 8px;
+}
+
+.modqueue_mass {
+	list-style: none;
+	margin: 0;
+	width: 150px;
+	padding: 0;
+}
+
+.modqueue_mass li {
+	margin-bottom: 4px;
+	padding: 0;
+}
+
+.modqueue_mass li a {
+	display: block;
+	padding: 4px;
+	border: 1px solid transparent;
+}
+
+.modqueue_mass li a:hover {
+	background: #efefef;
+	border: 1px solid #ccc;
+	text-decoration: none;
+}
+
+
+		
+		
+		
+		]]>
+		</stylesheet>
+	</stylesheets>
+	<templates>
+		<template name="footer" version="1820"><![CDATA[<debugstuff>
+	</div>
+</div>
+<div id="footer">
+	<div class="upper">
+		<div class="wrapper">
+			{$lang_select}
+			{$theme_select}
+			<ul class="menu bottom_links">
+				{$showteamlink}
+				{$contact_us}
+				<li><a href="{$mybb->settings['homeurl']}">{$mybb->settings['homename']}</a></li>
+				<li><a href="#top">{$lang->bottomlinks_returntop}</a></li>
+				<li><a href="<archive_url>">{$lang->bottomlinks_litemode}</a></li>
+				<li><a href="{$mybb->settings['bburl']}/misc.php?action=markread{$post_code_string}">{$lang->bottomlinks_markread}</a></li>
+				<li><a href="{$mybb->settings['bburl']}/misc.php?action=syndication">{$lang->bottomlinks_syndication}</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="lower">
+		<div class="wrapper">
+			<span id="current_time">{$lang->welcome_current_time}</span>
+			<span id="scroll_up"></span><span id="scroll_dn"></span>
+			<span id="copyright">
+			<!-- Start Ubuntu / Canonical Copyright -->
+Canonical Ltd.  &copy; - {$copy_year} <a href="http://ubuntu.com" target="_blank">Ubuntu </a>and <a href="http://canonical.com" target="_blank">Canonical </a> are registered trademarks of Canonical Ltd.
+				<br />
+				<!-- End Ubuntu / Canonical Copyright -->
+			
+				<!-- MyBB is free software developed and maintained by a volunteer community.
+					It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact,
+					to show your support for MyBB.  If you choose to remove or modify the copyright below,
+					you may be refused support on the MyBB Community Forums.
+
+					This is free software, support us and we'll support you. -->
+				{$lang->powered_by} <a href="https://mybb.com" target="_blank" rel="noopener">MyBB{$mybbversion}</a>, &copy; 2002-{$copy_year} <a href="https://mybb.com" target="_blank" rel="noopener">MyBB Group</a>.
+				<!-- End powered by -->
+				<br />
+				<!-- Begin Theme Credits -->
+				Theme by: <a href="http://community.mybb.com/user-6029.html" target="_blank">Vintagedaddyo</a>
+				
+                <!-- End Theme Credits -->
+			</span>
+		</div>
+	</div>
+</div>
+
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE -->{$task_image}<!-- End task image code -->
+{$auto_dst_detection}
+</div>]]></template>
+		<template name="forumdisplay_thread_rating" version="1811"><![CDATA[<td align="center" class="{$bgcolor}{$thread_type_class}" id="rating_table_{$thread['tid']}">
+        
+<ul class="star_rating{$not_rated}" id="rating_thread_{$thread['tid']}">
+<li style="width: {$thread['width']}%" class="current_rating" id="current_rating_{$thread['tid']}">{$ratingvotesav}</li>
+<li><a class="five_stars" title="{$lang->five_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=5&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="four_stars" title="{$lang->four_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=4&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="three_stars" title="{$lang->three_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=3&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="two_stars" title="{$lang->two_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=2&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="one_star" title="{$lang->one_star}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=1&amp;my_post_key={$mybb->post_code}"></a></li>
+            </ul>
+
+
+
+        
+    </td>]]></template>
+		<template name="header" version="1820"><![CDATA[<a name="top" id="top"></a>
+<div  id="ubuntubbmastwrap">
+
+<div id="ubuntubbmasthead">
+<div style="text-align: left">	
+	<a href="{$mybb->settings['bburl']}/index.php"><img src="{$theme['logo']}" alt="{$mybb->settings['bbname']}" title="{$mybb->settings['bbname']}" /></a>	
+	</div>	
+        <div id="ubuntubbnav">
+          <ul>
+            <li id="current">
+              <a href="{$mybb->settings['bburl']}/index.php" title="{$mybb->settings['bbname']}">{$mybb->settings['bbname']}</a>
+            </li>
+            <li id="plain">
+              <a href="{$mybb->settings['bburl']}/portal.php" title="Portal">Portal</a>
+            </li>
+            <li id="plain">
+              <a href="{$mybb->settings['homeurl']}" title="{$mybb->settings['homename']}">{$mybb->settings['homename']}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<div id="container">
+<div id="pagecontainer">		
+		<div id="header">
+			<div id="logo">
+				<div class="wrapper">
+{$quicksearch}
+					<ul class="menu top_links">
+						{$menu_portal}
+						{$menu_search}
+						{$menu_memberlist}
+						{$menu_calendar}
+						<li><a href="{$mybb->settings['bburl']}/misc.php?action=help" class="help">{$lang->toplinks_help}</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="panel">
+				<div class="upper">
+					<div class="wrapper">
+						<span style="float: right;">{$lang->welcome_current_time}</span>
+						{$welcomeblock}
+					<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+				<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+			</div>
+		</div>
+				<br />
+		<div id="content">
+			<div class="wrapper">
+				{$pm_notice}
+				{$remote_avatar_notice}
+				{$bannedwarning}
+				{$bbclosedwarning}
+				{$modnotice}
+				{$pending_joinrequests}
+				{$awaitingusers}
+				<navigation>
+				<br />]]></template>
+		<template name="headerinclude" version="1820"><![CDATA[<!-- Add Favicon -->
+<link rel="Shortcut icon" href="{$mybb->settings['bburl']}/{$theme['imgdir']}/favicon.ico" />
+<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1820"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1820"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1820"></script>
+
+{$stylesheets}
+
+<script type="text/javascript">    
+$(document).ready(function(){
+    appear();
+    $(window).scroll(function(){
+       appear();
+    });                    
+    function appear() {
+        if ($(this).scrollTop() > 200) {
+           $('#scroll_up').fadeIn('slow');
+        } else {
+           $('#scroll_up').fadeOut('slow');
+        }
+        if ($(this).scrollTop() < ($('html, body').height() - (200+$(window).height()))) {
+            $('#scroll_dn').fadeIn('slow');
+        } else {
+            $('#scroll_dn').fadeOut('slow');
+        }
+    };
+    $('#scroll_up').click(function(){
+        $('html, body').stop().animate({scrollTop: 0}, 600);
+    });
+    $('#scroll_dn').click(function(){
+                    $('html, body').stop().animate({scrollTop:$('html, body').height()}, 600);
+                    });
+                });    
+</script>
+
+<script type="text/javascript">
+<!--
+	lang.unknown_error = "{$lang->unknown_error}";
+
+	lang.select2_match = "{$lang->select2_match}";
+	lang.select2_matches = "{$lang->select2_matches}";
+	lang.select2_nomatches = "{$lang->select2_nomatches}";
+	lang.select2_inputtooshort_single = "{$lang->select2_inputtooshort_single}";
+	lang.select2_inputtooshort_plural = "{$lang->select2_inputtooshort_plural}";
+	lang.select2_inputtoolong_single = "{$lang->select2_inputtoolong_single}";
+	lang.select2_inputtoolong_plural = "{$lang->select2_inputtoolong_plural}";
+	lang.select2_selectiontoobig_single = "{$lang->select2_selectiontoobig_single}";
+	lang.select2_selectiontoobig_plural = "{$lang->select2_selectiontoobig_plural}";
+	lang.select2_loadmore = "{$lang->select2_loadmore}";
+	lang.select2_searching = "{$lang->select2_searching}";
+
+	var templates = {
+		modal: '{$jsTemplates['modal']}',
+		modal_button: '{$jsTemplates['modal_button']}'
+	};
+
+	var cookieDomain = "{$mybb->settings['cookiedomain']}";
+	var cookiePath = "{$mybb->settings['cookiepath']}";
+	var cookiePrefix = "{$mybb->settings['cookieprefix']}";
+	var cookieSecureFlag = "{$mybb->settings['cookiesecureflag']}";
+	var deleteevent_confirm = "{$lang->deleteevent_confirm}";
+	var removeattach_confirm = "{$lang->removeattach_confirm}";
+	var loading_text = '{$lang->ajax_loading}';
+	var saving_changes = '{$lang->saving_changes}';
+	var use_xmlhttprequest = "{$mybb->settings['use_xmlhttprequest']}";
+	var my_post_key = "{$mybb->post_code}";
+	var rootpath = "{$mybb->settings['bburl']}";
+	var imagepath = "{$theme['imgdir']}";
+  	var yes_confirm = "{$lang->yes}";
+	var no_confirm = "{$lang->no}";
+	var MyBBEditor = null;
+	var spinner_image = "{$theme['imgdir']}/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	var modal_zindex = 9999;
+// -->
+</script>]]></template>
+		<template name="header_welcomeblock_member" version="1811"><![CDATA[<!-- Continuation of div(class="upper") as opened in the header template -->
+	<span class="welcome">{$lang->welcome_back} <a href="{$mybb->settings['bburl']}/member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}" class="logout">{$lang->welcome_logout}</a></span>
+	</div>
+</div>
+<div class="lower">
+	<div class="wrapper">
+		<ul class="menu panel_links">
+
+			{$usercplink}
+			{$modcplink}
+			{$admincplink}
+
+			<li><a href="search.php?action=finduserthreads&uid={$mybb->user['uid']}">My threads</a>
+			<a href="search.php?action=finduser&uid={$mybb->user['uid']}">My posts</a></li>
+	
+		</ul>
+
+
+
+		<ul class="menu user_links">
+			<li><a href="javascript:void(0)" onclick="MyBB.popupWindow('{$mybb->settings['bburl']}/misc.php?action=buddypopup&modal=1', null, true); return false;">{$lang->welcome_open_buddy_list}</a></li>
+			{$searchlink}
+			{$pmslink}
+
+		</ul>
+	</div>
+	<br class="clear" />
+</div>]]></template>
+		<template name="modcp_nav_forums_posts" version="1818"><![CDATA[	<tr>
+		<td class="thead thead_menu thead_collapse{$collapsedimg['modcpforums']}">
+			<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['modcpforums']}.png" id="modcpforums_img" class="expander" alt="[-]" title="[-]" /></div>
+			<div><span class="smalltext"><strong>{$lang->mcp_nav_forums}</strong></span></div>
+		</td>
+	</tr>
+	<tbody style="{$collapsed['modcpforums_e']}" id="modcpforums_e">
+		{$nav_announcements}
+		{$nav_modqueue}
+		{$nav_reportcenter}
+		{$nav_modlogs}
+	</tbody>]]></template>
+		<template name="modcp_nav_users" version="1818"><![CDATA[	<tr>
+		<td class="thead thead_menu thead_collapse{$collapsedimg['modcpusers']}">
+			<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['modcpusers']}.png" id="modcpusers_img" class="expander" alt="[-]" title="[-]" /></div>
+			<div><span class="smalltext"><strong>{$lang->mcp_nav_users}</strong></span></div>
+		</td>
+	</tr>
+	<tbody style="{$collapsed['modcpusers_e']}" id="modcpusers_e">
+		{$nav_editprofile}
+		{$nav_banning}
+		{$nav_warninglogs}
+		{$nav_ipsearch}
+	</tbody>]]></template>
+		<template name="polls_showresults_resultbit" version="1811"><![CDATA[<tr>
+<td class="{$optionbg}" align="right" width="400">{$option}{$votestar}</td>
+<td class="{$optionbg}" width="300">
+<div class="progress_bar" title="{$percent}%">
+<div class="progress" style="width: {$percent}%;"></div>
+</div>
+{$userlist}</td>
+<td class="{$optionbg}" width="70" align="center">{$votes}</td>
+<td class="{$optionbg}" width="30" align="center">{$percent}%</td>
+</tr>]]></template>
+		<template name="portal" version="1811"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']}</title>
+<link rel="alternate" type="application/rss+xml" title="{$lang->latest_announcements} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php?portal=1" />
+<link rel="alternate" type="application/atom+xml" title="{$lang->latest_announcements} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?portal=1&type=atom1.0" />
+{$headerinclude}
+</head>
+<body>
+<a name="top" id="top"></a>
+<div  id="ubuntubbmastwrap">
+      <div id="ubuntubbmasthead">
+	    <div style="text-align: left">		
+	<a href="{$mybb->settings['bburl']}/index.php"><img src="{$theme['logo']}" alt="{$mybb->settings['bbname']}" title="{$mybb->settings['bbname']}" /></a>	
+	</div>	
+        <div id="ubuntubbnav">
+          <ul>
+            <li id="plain">
+              <a href="{$mybb->settings['bburl']}/index.php" title="{$mybb->settings['bbname']}">{$mybb->settings['bbname']}</a>
+            </li>
+            <li id="current">
+              <a href="{$mybb->settings['bburl']}/portal.php" title="Portal">Portal</a>
+            </li>
+            <li id="plain">
+              <a href="{$mybb->settings['homeurl']}" title="{$mybb->settings['homename']}">{$mybb->settings['homename']}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<div id="container">
+<div id="pagecontainer">
+		<div id="header">
+			<div id="logo">		 								
+				<div class="wrapper">
+						<ul class="menu top_links">
+						{$quicksearch}
+						<li><a href="{$mybb->settings['bburl']}/index.php" title="{$mybb->settings['bbname']}" class="portal">{$mybb->settings['bbname']}</a></li>
+						{$menu_search}
+						{$menu_memberlist}
+						{$menu_calendar}
+						<li><a href="{$mybb->settings['bburl']}/misc.php?action=help" class="help">{$lang->toplinks_help}</a></li>
+												
+					</ul>
+				</div>
+			</div>
+			<div id="panel">
+				<div class="upper">
+					<div class="wrapper">
+						   <span style="float: right;">{$lang->welcome_current_time}</span>
+						{$welcomeblock}
+					<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+				<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+			</div>
+		</div><br />
+		<div id="content">
+			<div class="wrapper">
+				{$pm_notice}
+				{$bannedwarning}
+				{$bbclosedwarning}
+				{$unreadreports}
+				{$pending_joinrequests}
+				{$awaitingusers}
+				<navigation>
+				<br />	
+	
+	
+<table width="100%" cellspacing="0" cellpadding="{$theme['tablespace']}" border="0" align="center">
+<tr><td valign="top" width="200">
+{$welcome}
+{$pms}
+{$search}
+{$stats}
+{$whosonline}
+{$latestthreads}
+</td>
+<td>&nbsp;</td>
+<td valign="top">
+{$announcements}
+{$multipage}
+</td>
+</tr>
+</table>
+{$footer}
+</body>
+</html>]]></template>
+		<template name="postbit_offline" version="1806"><![CDATA[<img src="{$theme['imgdir']}/buddy_offline.png" title="{$lang->postbit_status_offline}" alt="{$lang->postbit_status_offline}" class="buddy_status" />]]></template>
+		<template name="postbit_online" version="1806"><![CDATA[<a href="online.php" title="{$lang->postbit_status_online}"><img src="{$theme['imgdir']}/buddy_online.png" border="0" alt="{$lang->postbit_status_online}" class="buddy_status" /></a>]]></template>
+		<template name="showthread_poll_resultbit" version="1811"><![CDATA[<tr>
+<td class="{$optionbg}" align="right" width="400">{$option}{$votestar}</td>
+<td class="{$optionbg}" width="300">
+<div class="progress_bar" title="{$percent}%">
+<div class="progress" style="width: {$percent}%;"></div>
+</div>
+</td>
+<td class="{$optionbg}" width="70" align="center">{$votes}</td>
+<td class="{$optionbg}" width="30" align="center">{$percent}%</td>
+</tr>]]></template>
+		<template name="showthread_ratethread" version="1818"><![CDATA[<div class="star_rating_container">
+	<scriptstyle="margin-top: 6px; padding-right: 10px;" class="float_right">
+		<script type="text/javascript">
+		<!--
+			lang.ratings_update_error = "{$lang->ratings_update_error}";
+		// -->
+		</script>
+        <script type="text/javascript" src="jscripts/rating.js?ver=1808"></script>
+        <div id="success_rating_{$thread['tid']}" style="float: left; padding-top: 2px; padding-right: 10px;">&nbsp;</div>
+<strong style="float: left; padding-right: 10px;">{$lang->thread_rating}</strong>
+        <div class="inline_rating">
+
+<ul class="star_rating{$not_rated}" id="rating_thread_{$thread['tid']}">
+<li style="width: {$thread['width']}%" class="current_rating" id="current_rating_{$thread['tid']}">{$ratingvotesav}</li>
+<li><a class="five_stars" title="{$lang->five_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=5&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="four_stars" title="{$lang->four_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=4&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="three_stars" title="{$lang->three_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=3&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="two_stars" title="{$lang->two_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=2&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="one_star" title="{$lang->one_star}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=1&amp;my_post_key={$mybb->post_code}"></a></li>
+            </ul>
+        </div>
+</div>]]></template>
+		<template name="usercp_nav_messenger" version="1818"><![CDATA[<tbody>
+<tr>
+	<td class="thead thead_menu thead_collapse{$collapsedimg['usercppms']}">
+		<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['usercppms']}.png" id="usercppms_img" class="expander" alt="[-]"/></div>
+		<div><span class="smalltext"><strong>{$lang->ucp_nav_messenger}</strong></span></div>
+	</td>
+</tr>
+</tbody>
+<tbody style="{$collapsed['usercppms_e']}" id="usercppms_e">
+	{$ucp_nav_compose}
+	<tr>
+		<td class="trow1 smalltext">
+			{$folderlinks}
+		</td>
+	</tr>
+	{$ucp_nav_tracking}
+	<tr><td class="trow1 smalltext"><a href="private.php?action=folders" class="usercp_nav_item usercp_nav_pmfolders">{$lang->ucp_nav_edit_folders}</a></td></tr>
+</tbody>]]></template>
+		<template name="usercp_nav_misc" version="1818"><![CDATA[<tbody>
+<tr>
+	<td class="thead thead_menu thead_collapse{$collapsedimg['usercpmisc']}">
+		<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['usercpmisc']}.png" id="usercpmisc_img" class="expander" alt="[-]" title="[-]" /></div>
+		<div><span class="smalltext"><strong>{$lang->ucp_nav_misc}</strong></span></div>
+	</td>
+</tr>
+</tbody>
+<tbody style="{$collapsed['usercpmisc_e']}" id="usercpmisc_e">
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=usergroups" class="usercp_nav_item usercp_nav_usergroups">{$lang->ucp_nav_usergroups}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=editlists" class="usercp_nav_item usercp_nav_editlists">{$lang->ucp_nav_editlists}</a></td></tr>
+	{$attachmentop}
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=drafts" class="usercp_nav_item usercp_nav_drafts">{$draftcount}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=subscriptions" class="usercp_nav_item usercp_nav_subscriptions">{$lang->ucp_nav_subscribed_threads}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=forumsubscriptions" class="usercp_nav_item usercp_nav_fsubscriptions">{$lang->ucp_nav_forum_subscriptions}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="{$profile_link}" class="usercp_nav_item usercp_nav_viewprofile">{$lang->ucp_nav_view_profile}</a></td></tr>
+</tbody>]]></template>
+		<template name="usercp_nav_profile" version="1818"><![CDATA[<tbody>
+<tr>
+	<td class="thead thead_menu thead_collapse{$collapsedimg['usercpprofile']}">
+		<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['usercpprofile']}.png" id="usercpprofile_img" class="expander" alt="[-]" title="[-]" /></div>
+		<div><span class="smalltext"><strong>{$lang->ucp_nav_profile}</strong></span></div>
+	</td>
+</tr>
+</tbody>
+<tbody style="{$collapsed['usercpprofile_e']}" id="usercpprofile_e">
+	<tr><td class="trow1 smalltext">
+		<div><a href="usercp.php?action=profile" class="usercp_nav_item usercp_nav_profile">{$lang->ucp_nav_edit_profile}</a></div>
+		{$changenameop}
+		<div><a href="usercp.php?action=password" class="usercp_nav_item usercp_nav_password">{$lang->ucp_nav_change_pass}</a></div>
+		<div><a href="usercp.php?action=email" class="usercp_nav_item usercp_nav_email">{$lang->ucp_nav_change_email}</a></div>
+		<div><a href="usercp.php?action=avatar" class="usercp_nav_item usercp_nav_avatar">{$lang->ucp_nav_change_avatar}</a></div>
+		{$changesigop}
+	</td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=options" class="usercp_nav_item usercp_nav_options">{$lang->ucp_nav_edit_options}</a></td></tr>
+</tbody>]]></template>
+	</templates>
+</theme>
