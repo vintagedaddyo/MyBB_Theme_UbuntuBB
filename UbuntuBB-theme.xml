@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="UbuntuBB" version="1820">
+<theme name="UbuntuBB" version="1830">
 	<properties>
-		<templateset><![CDATA[17]]></templateset>
+		<templateset><![CDATA[39]]></templateset>
 		<editortheme><![CDATA[mybb.css]]></editortheme>
 		<imgdir><![CDATA[themes/ubuntubb]]></imgdir>
 		<logo><![CDATA[themes/ubuntubb/headerlogo.png]]></logo>
@@ -11,7 +11,7 @@
 		<disporder><![CDATA[a:7:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:10:"usercp.css";i:3;s:17:"thread_status.css";i:4;s:16:"star_ratings.css";i:5;s:14:"showthread.css";i:6;s:9:"modcp.css";i:7;}]]></disporder>
 	</properties>
 	<stylesheets>
-		<stylesheet name="global.css" version="1820"><![CDATA[/*
+		<stylesheet name="global.css" version="1830"><![CDATA[/*
  * MyBB: UbuntuBB Frontend Theme 
  *
  * File: global.css File
@@ -2000,9 +2000,10 @@ div.jqi .jqisubstate .jqibuttons button {
 }
 
 /** Impromptu End */
-	]]>
+	
+		]]>
 		</stylesheet>
-		<stylesheet name="css3.css" version="1820"><![CDATA[/*
+		<stylesheet name="css3.css" version="1830"><![CDATA[/*
  * MyBB: UbuntuBB Frontend Theme 
  *
  * File: css3.css File
@@ -2110,9 +2111,10 @@ a.button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1820"><![CDATA[/*
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1830"><![CDATA[/*
  * MyBB: UbuntuBB Frontend Theme 
  *
  * File: usercp.css File
@@ -2276,9 +2278,10 @@ a.button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1820"><![CDATA[/*
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1830"><![CDATA[/*
  * MyBB: UbuntuBB Frontend Theme 
  *
  * File: thread_status.css File
@@ -2365,9 +2368,10 @@ a.button {
 .thread_status.newclosefolder {
     background-image: url('themes/ubuntubb/newlockfolder.png');  
 }
-	]]>
+	
+		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1820"><![CDATA[/*
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1830"><![CDATA[/*
  * MyBB: UbuntuBB Frontend Theme 
  *
  * File: star_rating.css File
@@ -2482,9 +2486,10 @@ td[id*="rating_table"] {
 text-align:center;
 margin:0 auto;
 }
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="showthread.css" attachedto="showthread.php" version="1820"><![CDATA[/*
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1830"><![CDATA[/*
  * MyBB: UbuntuBB Frontend Theme 
  *
  * File: showthread.css File
@@ -2542,9 +2547,10 @@ ul.thread_tools li.poll {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="modcp.css" attachedto="modcp.php" version="1820"><![CDATA[/*
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1830"><![CDATA[/*
  * MyBB: UbuntuBB Frontend Theme 
  *
  * File: modcp.css File
@@ -2658,11 +2664,12 @@ ul.thread_tools li.poll {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
 	</stylesheets>
 	<templates>
-		<template name="footer" version="1820"><![CDATA[<debugstuff>
+		<template name="footer" version="1830"><![CDATA[<debugstuff>
 	</div>
 </div>
 <div id="footer">
@@ -2687,7 +2694,7 @@ ul.thread_tools li.poll {
 			<span id="scroll_up"></span><span id="scroll_dn"></span>
 			<span id="copyright">
 			<!-- Start Ubuntu / Canonical Copyright -->
-Canonical Ltd.  &copy; - {$copy_year} <a href="http://ubuntu.com" target="_blank">Ubuntu </a>and <a href="http://canonical.com" target="_blank">Canonical </a> are registered trademarks of Canonical Ltd.
+Canonical Ltd.  &copy; - {$copy_year} <a href="https://ubuntu.com" target="_blank">Ubuntu </a>and <a href="https://canonical.com" target="_blank">Canonical </a> are registered trademarks of Canonical Ltd.
 				<br />
 				<!-- End Ubuntu / Canonical Copyright -->
 			
@@ -2701,7 +2708,7 @@ Canonical Ltd.  &copy; - {$copy_year} <a href="http://ubuntu.com" target="_blank
 				<!-- End powered by -->
 				<br />
 				<!-- Begin Theme Credits -->
-				Theme by: <a href="http://community.mybb.com/user-6029.html" target="_blank">Vintagedaddyo</a>
+				Theme by: <a href="https://github.com/vintagedaddyo/MyBB_Theme_UbuntuBB" target="_blank">Vintagedaddyo</a>
 				
                 <!-- End Theme Credits -->
 			</span>
@@ -2785,15 +2792,15 @@ Canonical Ltd.  &copy; - {$copy_year} <a href="http://ubuntu.com" target="_blank
 				{$awaitingusers}
 				<navigation>
 				<br />]]></template>
-		<template name="headerinclude" version="1820"><![CDATA[<!-- Add Favicon -->
-<link rel="Shortcut icon" href="{$mybb->settings['bburl']}/{$theme['imgdir']}/favicon.ico" />
+		<template name="headerinclude" version="1830"><![CDATA[<!-- Add Favicon -->
+<link rel="Shortcut icon" href="{$theme['imgdir']}/favicon.ico" />
 <link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1820"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1820"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1820"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1823"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1827"></script>
 
 {$stylesheets}
 
@@ -2827,7 +2834,9 @@ $(document).ready(function(){
 <script type="text/javascript">
 <!--
 	lang.unknown_error = "{$lang->unknown_error}";
-
+	lang.confirm_title = "{$lang->confirm_title}";
+	lang.expcol_collapse = "{$lang->expcol_collapse}";
+	lang.expcol_expand = "{$lang->expcol_expand}";
 	lang.select2_match = "{$lang->select2_match}";
 	lang.select2_matches = "{$lang->select2_matches}";
 	lang.select2_nomatches = "{$lang->select2_nomatches}";
@@ -2865,7 +2874,7 @@ $(document).ready(function(){
 	var modal_zindex = 9999;
 // -->
 </script>]]></template>
-		<template name="header_welcomeblock_member" version="1811"><![CDATA[<!-- Continuation of div(class="upper") as opened in the header template -->
+		<template name="header_welcomeblock_member" version="1830"><![CDATA[<!-- Continuation of div(class="upper") as opened in the header template -->
 	<span class="welcome">{$lang->welcome_back} <a href="{$mybb->settings['bburl']}/member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}" class="logout">{$lang->welcome_logout}</a></span>
 	</div>
 </div>
@@ -2885,7 +2894,7 @@ $(document).ready(function(){
 
 
 		<ul class="menu user_links">
-			<li><a href="javascript:void(0)" onclick="MyBB.popupWindow('{$mybb->settings['bburl']}/misc.php?action=buddypopup&modal=1', null, true); return false;">{$lang->welcome_open_buddy_list}</a></li>
+			{$buddylink}
 			{$searchlink}
 			{$pmslink}
 
@@ -3024,14 +3033,14 @@ $(document).ready(function(){
 <td class="{$optionbg}" width="70" align="center">{$votes}</td>
 <td class="{$optionbg}" width="30" align="center">{$percent}%</td>
 </tr>]]></template>
-		<template name="showthread_ratethread" version="1818"><![CDATA[<div class="star_rating_container">
-	<scriptstyle="margin-top: 6px; padding-right: 10px;" class="float_right">
+		<template name="showthread_ratethread" version="1830"><![CDATA[<div class="star_rating_container">
+	<script style="margin-top: 6px; padding-right: 10px;" class="float_right">
 		<script type="text/javascript">
 		<!--
 			lang.ratings_update_error = "{$lang->ratings_update_error}";
 		// -->
 		</script>
-        <script type="text/javascript" src="jscripts/rating.js?ver=1808"></script>
+        <script type="text/javascript" src="{$mybb->asset_url}/jscripts/rating.js?ver=1821"></script>
         <div id="success_rating_{$thread['tid']}" style="float: left; padding-top: 2px; padding-right: 10px;">&nbsp;</div>
 <strong style="float: left; padding-right: 10px;">{$lang->thread_rating}</strong>
         <div class="inline_rating">

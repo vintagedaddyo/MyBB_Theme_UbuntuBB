@@ -23,6 +23,8 @@ UbuntuBB v1.2
 » Changelog:
 
 History:
+
+03/19/2022 — Updated "UbuntuBB-theme.xml" file to 1.8.30
 04/05/2019 — Updated "UbuntuBB-theme.xml" file to 1.8.20
 09/11/2018 — Updated "UbuntuBB-theme.xml" file to 1.8.19
 08/30/2018 — Updated "UbuntuBB-theme.xml" file to 1.8.18
